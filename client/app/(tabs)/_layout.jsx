@@ -4,23 +4,33 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 export default function _layout()  {
   return (
     <Tabs screenOptions={{
-      headerShown: false
+      //headerShown: false
     }}>
       <Tabs.Screen
-        name="dashbaord"
+        name="home"
         options={{
+          headerShown: false,
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => {
-            <Icon name="home" size={size} color={color} />;
+            return <Icon name="home" size={size} color={color} />;
           },
         }}
       />
-      {/* <Tabs.Screen
+      <Tabs.Screen
         name="sales"
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => {
-            <Icon name="home" size={size} color={color} />;
+            return <Icon name="home" size={size} color={color} />;
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="purches"
+        options={{
+          tabBarLabel: 'Purches',
+          tabBarIcon: ({ color, size }) => {
+            return <Icon name="home" size={size} color={color} />;
           },
         }}
       />
@@ -29,28 +39,20 @@ export default function _layout()  {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => {
-            <Icon name="home" size={size} color={color} />;
+            return <Icon name="home" size={size} color={color} />;
           },
         }}
       />
-      <Tabs.Screen
-        name="purches"
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => {
-            <Icon name="home" size={size} color={color} />;
-          },
-        }}
-      />
+      
       <Tabs.Screen
         name="orders"
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => {
-            <Icon name="home" size={size} color={color} />;
+           return <Icon name="home" size={size} color={color} />;
           },
         }}
-      /> */}
+      /> 
     </Tabs>
   )
 }
