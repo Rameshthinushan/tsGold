@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 export default function _layout()  {
   return (
     <Tabs screenOptions={{
-      //headerShown: false
+      // headerShown: false
     }}>
       <Tabs.Screen
         name="home"
