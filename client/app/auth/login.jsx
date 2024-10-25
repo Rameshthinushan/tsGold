@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
 
-export default function HomeScreen () {
+export default function Dashboard () {
   return (
     <View>
-      <Text>Hii this is home screen</Text>
+      <Text>dashborad </Text>
     </View>
   )
 }
