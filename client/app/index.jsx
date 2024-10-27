@@ -1,4 +1,4 @@
-import {TextInput, TouchableOpacity, Image, Text, Button, ScrollView } from 'react-native'
+import {TextInput, TouchableOpacity, Image, Text, View, ScrollView } from 'react-native'
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import { Link } from 'expo-router';
 import styles from './styles/authStyles';
@@ -27,42 +27,43 @@ export default function HomeScreen() {
   }
 
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
-        <ScrollView keyboardDismissMode="interactive">
-          <Image 
-            source={require('../assets/appimages/logo.png')}
-            style={styles.logo}
-          />
-          <Text style={styles.welcomeText}>Welcome Back</Text>
-          <TextInput
-            style={styles.textInput}
-            placeholder={'Username'}
-            onChangeText={(value) => handleInputChange(value, 'usename')}
-          />
-          {/* <Text style={styles.errorText}>Please Enter Your Username..</Text> */}
-          <TextInput
-            secureTextEntry={true}
-            style={styles.textInput}
-            placeholder={'Password'}
-            onChangeText={(value) => handleInputChange(value, 'password')}
-          />
-          {/* <Text style={styles.errorText}>Please Enter Your Password..</Text> */}
-          <Link 
-            href={'/auth/forgot'} 
-            style={styles.forgotPassowrd}
-          >
-            <Text>Forgot password</Text>
-          </Link>
-          <TouchableOpacity
-            onPress={login}
-            style={styles.buttonContainer}
-          >
-            <Text style={styles.buttonText}>Login</Text>
-          </TouchableOpacity>
-        </ScrollView>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <ScrollView 
+      keyboardDismissMode="interactive"
+      contentContainerStyle={styles.container}
+    >
+      <View>
+        <Image 
+          source={require('../assets/appimages/logo.png')}
+          style={styles.logo}
+        />
+      </View>
+      <Text style={styles.welcomeText}>Welcome Back</Text>
+      <TextInput
+        style={styles.textInput}
+        placeholder={'Username'}
+        onChangeText={(value) => handleInputChange(value, 'usename')}
+      />
+      {/* <Text style={styles.errorText}>Please Enter Your Username..</Text> */}
+      <TextInput
+        secureTextEntry={true}
+        style={styles.textInput}
+        placeholder={'Password'}
+        onChangeText={(value) => handleInputChange(value, 'password')}
+      />
+      {/* <Text style={styles.errorText}>Please Enter Your Password..</Text> */}
+      <Link 
+        href={'/auth/forgot'} 
+        style={styles.forgotPassowrd}
+      >
+        <Text>Forgot password</Text>
+      </Link>
+      <TouchableOpacity
+        onPress={login}
+        style={styles.buttonContainer}
+      >
+        <Text style={styles.buttonText}>Login</Text>
+      </TouchableOpacity>
+    </ScrollView>
   )
 }
 

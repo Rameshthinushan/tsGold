@@ -18,7 +18,7 @@ export default function _layout() {
         <Stack.Screen
           name='auth/forgot'
           options={{
-            title: 'Forgot Password'
+            headerShown: false
           }}
         />
       </Stack>

@@ -3,6 +3,8 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     padding: 50,
+    flex: 1,  
+    justifyContent: 'center' 
   },
   logo: {
     width: 200,
@@ -43,6 +45,11 @@ const styles = StyleSheet.create({
   errorText: {
     color: 'red',
     fontSize: 12
+  },
+  fingerprint: {
+    width: 60,
+    height: 100,
+    margin: 'auto'
   }
 })
 

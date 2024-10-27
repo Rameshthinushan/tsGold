@@ -1,41 +1,60 @@
-import { StyleSheet, TextInput, TouchableOpacity, Image, Text, Button, ScrollView } from 'react-native'
+import { View, TextInput, TouchableOpacity, Image, Text, Button, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import styles from '../styles/authStyles';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function ForgetPassword() {
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
-        <ScrollView keyboardDismissMode="interactive">
-          {/* <Image 
-            source={require('../assets/appimages/logo.png')}
-            style={styles.logo}
-          /> */}
-          
-          <TextInput
-            style={styles.textInput}
-            placeholder={'Username'}
-          />
-          <TextInput
-            secureTextEntry={true}
-            style={styles.textInput}
-            placeholder={'New Password'}
-          />
-          <TextInput
-            secureTextEntry={true}
-            style={styles.textInput}
-            placeholder={'Confirm Password'}
-          />
-          <TouchableOpacity
-            onPress={() => console.log('working')}
-            style={styles.buttonContainer}
-          >
-            <Text style={styles.buttonText}>Forgot</Text>
-          </TouchableOpacity>
-        </ScrollView>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <ScrollView 
+      keyboardDismissMode="interactive"
+      contentContainerStyle={styles.container}
+    >
+      <View>
+        <Image 
+          source={require('../../assets/appimages/fingerprint-scan.png')}
+          style={{
+            width: 60,
+            height: 60,
+            margin: 'auto'
+          }}
+        />
+      </View>
+      <Text style={{
+        textAlign: 'center', 
+        fontWeight: '600', 
+        fontSize: 25,
+        marginTop: 10
+      }}>Fogot password ?</Text>
+      <Text style={{
+        textAlign: 'center', 
+        fontSize: 12,
+        marginTop: 5,
+        color: 'grey'
+      }}>No warries, We'll send your reset instructions</Text>
+      <TextInput
+        style={styles.textInput}
+        placeholder={'Username'}
+      />
+
+      <TouchableOpacity
+        onPress={() => console.log('working')}
+        style={styles.buttonContainer}
+      >
+        <Text style={styles.buttonText}>Reset Password</Text>
+      </TouchableOpacity>
+       
+      
+
+         
+        <Text style={{fontSize: 15, textAlign: 'center', marginTop: 10, color: 'grey'}}> Back to log in  </Text>
+        
+      
+       
+        
+     
+    </ScrollView>
+      
   )
 }
 
