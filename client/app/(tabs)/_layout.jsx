@@ -12,30 +12,21 @@ export default function _layout()  {
       },
     }
   }, {
-    name: 'orders',
-    options: {
-      headerShown: false,
-      tabBarLabel: 'Order',
-      tabBarIcon: ({ color, size }) => {
-        return <Icon name="home" size={size} color={color} />;
-      },
-    }
-  }, {
     name: 'sales',
     options: {
       headerShown: false,
       tabBarLabel: 'Sales',
       tabBarIcon: ({ color, size }) => {
-        return <Icon name="home" size={size} color={color} />;
+        return <Icon name="cart" size={size} color={color} />;
       },
     }
   }, {
-    name: 'stock',
+    name: 'orders',
     options: {
-      headerShown: true,
-      tabBarLabel: 'Stock',
+      headerShown: false,
+      tabBarLabel: 'Order',
       tabBarIcon: ({ color, size }) => {
-        return <Icon name="home" size={size} color={color} />;
+        return <Icon name="cart-plus" size={size} color={color} />;
       },
     }
   }, {
@@ -44,7 +35,16 @@ export default function _layout()  {
       headerShown: true,
       tabBarLabel: 'purchase',
       tabBarIcon: ({ color, size }) => {
-        return <Icon name="home" size={size} color={color} />;
+        return <Icon name="dump-truck" size={size} color={color} />;
+      },
+    }
+  }, {
+    name: 'stock',
+    options: {
+      headerShown: true,
+      tabBarLabel: 'Stock',
+      tabBarIcon: ({ color, size }) => {
+        return <Icon name="rhombus-split" size={size} color={color} />;
       },
     }
   }]
@@ -60,54 +60,6 @@ export default function _layout()  {
           />
         ))
       }
-
-      {/* <Tabs.Screen
-        name="dashboard"
-        options={{
-          headerShown: false,
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => {
-            return <Icon name="home" size={size} color={color} />;
-          },
-        }}
-      /> */}
-      {/* <Tabs.Screen
-        name="sales"
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => {
-            return <Icon name="home" size={size} color={color} />;
-          },
-        }}
-      />
-      <Tabs.Screen
-        name="purches"
-        options={{
-          tabBarLabel: 'Purches',
-          tabBarIcon: ({ color, size }) => {
-            return <Icon name="home" size={size} color={color} />;
-          },
-        }}
-      />
-      <Tabs.Screen
-        name="stock"
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => {
-            return <Icon name="home" size={size} color={color} />;
-          },
-        }}
-      /> */}
-      
-      {/* <Tabs.Screen
-        name="orders"
-        options={{
-          tabBarLabel: 'Thinu',
-          tabBarIcon: ({ color, size }) => {
-           return <Icon name="home" size={size} color={color} />;
-          },
-        }}
-      />  */}
     </Tabs>
   )
 }

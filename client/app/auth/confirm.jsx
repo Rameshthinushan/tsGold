@@ -1,6 +1,4 @@
-import { View, TextInput, TouchableOpacity, Image, Text, Button, ScrollView } from 'react-native'
-import React, { useState } from 'react'
-import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+import { View, TextInput, TouchableOpacity, Image, Text, ScrollView } from 'react-native'
 import styles from '../styles/authStyles';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Link } from 'expo-router';
@@ -13,17 +11,20 @@ export default function ForgetPassword() {
     >
       <View>
         <Image 
-          source={require('../../assets/appimages/fingerprint-scan.png')}
+          source={require('../../assets/appimages/lock.png')}
           style={styles.authImage}
         />
       </View>
-      <Text style={styles.titleText}>Fogot password ?</Text>
-      <Text style={styles.subTitleText}>No warries, We'll send your reset instructions</Text>
+      <Text style={styles.titleText}>Set New Password</Text>
+      <Text style={styles.subTitleText}>Must be at lease 8 character</Text>
       <TextInput
         style={styles.textInput}
-        placeholder={'Username'}
+        placeholder={'New Password'}
       />
-
+      <TextInput
+        style={styles.textInput}
+        placeholder={'Confirm Password'}
+      />
       <TouchableOpacity
         onPress={() => console.log('working')}
         style={styles.buttonContainer}
@@ -33,7 +34,7 @@ export default function ForgetPassword() {
       <View style={styles.backToLogin}>
         <Icon name="arrow-left" size={15} style={styles.IconLeftArrow} />
         <Text style={styles.backToLoginText}>
-          <Link href={'auth/confirm'}> Back to log in </Link>
+          <Link href={'/'}> Back to log in </Link>
         </Text>
       </View>
     </ScrollView>

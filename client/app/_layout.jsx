@@ -21,6 +21,19 @@ export default function _layout() {
             headerShown: false
           }}
         />
+        <Stack.Screen
+          name='auth/confirm'
+          options={{
+            headerShown: false
+          }}
+        />
+         <Stack.Screen 
+          name='components/settings'
+          options={{
+            headerShown: false,
+            title: 'Settings'
+          }}
+        />
       </Stack>
     </PaperProvider>
   )

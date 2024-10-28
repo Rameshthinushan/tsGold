@@ -1,18 +1,11 @@
 import {TextInput, TouchableOpacity, Image, Text, View, ScrollView } from 'react-native'
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 import styles from './styles/authStyles';
 import { useState } from 'react';
 
 export default function HomeScreen() {
-  const [error, setError] = useState({
-    usename: false,
-    password: false
-  })
-  
-
   const [formData, setFormData] = useState({})
-  
   const handleInputChange = (value, name) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -20,10 +13,8 @@ export default function HomeScreen() {
     }))
   }
 
-  console.log(formData);
-
   const login = () => {
-
+    router.push('(tabs)/dashboard')
   }
 
   return (
@@ -43,14 +34,12 @@ export default function HomeScreen() {
         placeholder={'Username'}
         onChangeText={(value) => handleInputChange(value, 'usename')}
       />
-      {/* <Text style={styles.errorText}>Please Enter Your Username..</Text> */}
       <TextInput
         secureTextEntry={true}
         style={styles.textInput}
         placeholder={'Password'}
         onChangeText={(value) => handleInputChange(value, 'password')}
       />
-      {/* <Text style={styles.errorText}>Please Enter Your Password..</Text> */}
       <Link 
         href={'/auth/forgot'} 
         style={styles.forgotPassowrd}

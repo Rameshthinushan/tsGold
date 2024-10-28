@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 25,
     fontWeight: '600',
-    color: '#841584',
+    color: '#091057',
     marginBottom: 20,
   },
   forgotPassowrd: {
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     color: '#0000EE'
   },
   buttonContainer: {
-    backgroundColor: '#841584',
+    backgroundColor: '#091057',
     borderRadius: 5,
     padding:10,
     marginTop: 10,
@@ -49,6 +49,37 @@ const styles = StyleSheet.create({
   fingerprint: {
     width: 60,
     height: 100,
+    margin: 'auto'
+  },
+  backToLogin: { 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    marginTop: 20 
+  },
+  backToLoginText: { 
+    fontSize: 15, 
+    color: 'grey' 
+  },
+  IconLeftArrow : {
+    marginRight: 5,
+    color: 'grey'
+  },
+  titleText: {
+    textAlign: 'center', 
+    fontWeight: '600', 
+    fontSize: 25,
+    marginTop: 10
+  },
+  subTitleText: {
+    textAlign: 'center', 
+    fontSize: 12,
+    marginTop: 5,
+    color: 'grey'
+  },
+  authImage: {
+    width: 60,
+    height: 60,
     margin: 'auto'
   }
 })
