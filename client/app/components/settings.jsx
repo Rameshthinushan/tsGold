@@ -17,7 +17,7 @@ const Settings = () => (
           />
         </View>
 
-        <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+        <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingEnd: 20}}>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <View>
               <Avatar.Text size={50} label="RT" style={{
@@ -35,27 +35,140 @@ const Settings = () => (
           </View>
         </View>
         <Divider/>
-        <View style={{alignItems: 'center', margin: 10}}>
-          <Avatar.Text size={90} label="RT" style={{
-            backgroundColor: '#091057',
-            margin: 20
-          }}/>
-          <Text style={{fontSize: 20, fontWeight:'500'}}>Thinushan.R</Text>
-          <Text style={{color: 'grey'}}>rameshthinushan@gmail.com</Text>
-          <TouchableOpacity
-            style={styles.buttonContainer}
-          >
-            <Text style={styles.buttonText}>Edit Profile</Text>
-          </TouchableOpacity>
+        <View style={{paddingStart: 20, paddingEnd: 20}}>
+          <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View>
+                <Icon name="cog" size={25} style={{margin: 10}}></Icon>
+              </View>
+              <View>  
+                <Text style={{fontSize: 15}}>Management</Text>
+              </View>
+            </View>
+            <View>
+              <Icon name="chevron-right" size={30}></Icon>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View>
+                <Icon name="cog" size={25} style={{margin: 10}}></Icon>
+              </View>
+              <View>  
+                <Text style={{fontSize: 15}}>ReTake</Text>
+              </View>
+            </View>
+            <View>
+              <Icon name="chevron-right" size={30}></Icon>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View>
+                <Icon name="cog" size={25} style={{margin: 10}}></Icon>
+              </View>
+              <View>  
+                <Text style={{fontSize: 15}}>Return</Text>
+              </View>
+            </View>
+            <View>
+              <Icon name="chevron-right" size={30}></Icon>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View>
+                <Icon name="cog" size={25} style={{margin: 10}}></Icon>
+              </View>
+              <View>  
+                <Text style={{fontSize: 15}}>Goldsmith</Text>
+              </View>
+            </View>
+            <View>
+              <Icon name="chevron-right" size={30}></Icon>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View>
+                <Icon name="cog" size={25} style={{margin: 10}}></Icon>
+              </View>
+              <View>  
+                <Text style={{fontSize: 15}}>Trash</Text>
+              </View>
+            </View>
+            <View>
+              <Icon name="chevron-right" size={30}></Icon>
+            </View>
+          </View>
+          <Divider/>
+          <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View>
+                <Icon name="cog" size={25} style={{margin: 10}}></Icon>
+              </View>
+              <View>  
+                <Text style={{fontSize: 15}}>Management</Text>
+              </View>
+            </View>
+            <View>
+              <Icon name="chevron-right" size={30}></Icon>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View>
+                <Icon name="cog" size={25} style={{margin: 10}}></Icon>
+              </View>
+              <View>  
+                <Text style={{fontSize: 15}}>Management</Text>
+              </View>
+            </View>
+            <View>
+              <Icon name="chevron-right" size={30}></Icon>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View>
+                <Icon name="cog" size={25} style={{margin: 10}}></Icon>
+              </View>
+              <View>  
+                <Text style={{fontSize: 15}}>Management</Text>
+              </View>
+            </View>
+            <View>
+              <Icon name="chevron-right" size={30}></Icon>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View>
+                <Icon name="cog" size={25} style={{margin: 10}}></Icon>
+              </View>
+              <View>  
+                <Text style={{fontSize: 15}}>Management</Text>
+              </View>
+            </View>
+            <View>
+              <Icon name="chevron-right" size={30}></Icon>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View>
+                <Icon name="cog" size={25} style={{margin: 10}}></Icon>
+              </View>
+              <View>  
+                <Text style={{fontSize: 15}}>Management</Text>
+              </View>
+            </View>
+            <View>
+              <Icon name="chevron-right" size={30}></Icon>
+            </View>
+          </View>
+          <Divider/>
         </View>
-        <Divider/>
-        {/* <View style={{ flex: 1 }}> */}
-        <View style={{ flexDirection: 'row' , alignItems: 'center', justifyContent: 'space-between' }}>
-          <Text>fdf</Text>
-          <Text>fdf</Text>
-          <Text>fdf</Text>
-        </View>
-
       </ScrollView>
     </SafeAreaView>
   </SafeAreaProvider>
@@ -83,7 +196,8 @@ const styles = StyleSheet.create({
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#f0f0f0',
+    backgroundColor: 'white',
+    borderColor: 'black',
     borderRadius: 8,
     paddingHorizontal: 10,
     paddingVertical: 5,

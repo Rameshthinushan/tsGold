@@ -30,7 +30,7 @@ export default function _layout() {
          <Stack.Screen 
           name='components/settings'
           options={{
-            headerShown: false,
+            headerShown: true,
             title: 'Settings'
           }}
         />
