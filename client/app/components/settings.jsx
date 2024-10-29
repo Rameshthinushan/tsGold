@@ -59,7 +59,7 @@ export default function Settings() {
             <Icon name="magnify" size={20} color="grey" style={styles.searchIcon} />
             <TextInput
               style={styles.input}
-              placeholder="Search"
+              placeholder="Search..."
               placeholderTextColor="grey"
             />
           </View>
