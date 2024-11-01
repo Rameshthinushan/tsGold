@@ -42,6 +42,7 @@ export default function _layout()  {
     name: 'stock',
     options: {
       headerShown: true,
+      title: "Stock",
       tabBarLabel: 'Stock',
       tabBarIcon: ({ color, size }) => {
         return <Icon name="rhombus-split" size={size} color={color} />;
