@@ -273,11 +273,11 @@ export default function Stock() {
                     </View>
                   </View>
                   <View style={{ flexDirection: 'row' }}>
-                    <View style={{ width: '78%' }}></View>
+                    <View style={{ width: '72%' }}></View>
                     <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', marginEnd: 6 }}>
-                      <Icon name='application-edit-outline' size={18} color={'green'} />
-                      <Icon name='trash-can-outline' size={18} color={'red'} />
-                      <Icon name='qrcode' size={18} />
+                      <Icon name='application-edit-outline' size={25} color={'green'} />
+                      <Icon name='trash-can-outline' size={25} color={'red'} />
+                      <Icon name='qrcode' size={25} />
                     </View>
                   </View>
                 </View>

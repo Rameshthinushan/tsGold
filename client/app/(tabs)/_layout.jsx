@@ -23,7 +23,8 @@ export default function _layout()  {
   }, {
     name: 'orders',
     options: {
-      headerShown: false,
+      headerShown: true,
+      title: 'Orders',
       tabBarLabel: 'Order',
       tabBarIcon: ({ color, size }) => {
         return <Icon name="cart-plus" size={size} color={color} />;
@@ -33,6 +34,7 @@ export default function _layout()  {
     name: 'purchase',
     options: {
       headerShown: true,
+      title: 'Purchase',
       tabBarLabel: 'purchase',
       tabBarIcon: ({ color, size }) => {
         return <Icon name="dump-truck" size={size} color={color} />;
