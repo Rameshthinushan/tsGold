@@ -14,7 +14,7 @@ export default function HomeScreen() {
   }
 
   const login = () => {
-    router.push('(tabs)/dashboard')
+    router.push('components/todayRate')
   }
 
   return (

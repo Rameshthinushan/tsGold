@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 25,
     fontWeight: '600',
-    // color: '#2478f9',
+    // color: '#a020f0',
     marginBottom: 20,
   },
   forgotPassowrd: {
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     color: '#0000EE'
   },
   buttonContainer: {
-    backgroundColor: '#2478f9',
+    backgroundColor: '#a020f0',
     borderRadius: 5,
     padding:10,
     marginTop: 10,

@@ -27,11 +27,17 @@ export default function _layout() {
             headerShown: false
           }}
         />
-         <Stack.Screen 
+        <Stack.Screen 
           name='components/settings'
           options={{
             headerShown: true,
             title: 'Settings'
+          }}
+        />
+        <Stack.Screen
+          name="components/todayRate"
+          options={{
+            headerShown: false
           }}
         />
       </Stack>
