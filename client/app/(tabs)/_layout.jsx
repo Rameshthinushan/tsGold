@@ -33,7 +33,7 @@ export default function _layout()  {
   }, {
     name: 'purchase',
     options: {
-      headerShown: true,
+      headerShown: false,
       title: 'Purchase',
       tabBarLabel: 'purchase',
       tabBarIcon: ({ color, size }) => {

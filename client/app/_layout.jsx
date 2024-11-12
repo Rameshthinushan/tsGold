@@ -40,6 +40,13 @@ export default function _layout() {
             headerShown: false
           }}
         />
+        <Stack.Screen
+          name="components/rate"
+          options={{
+            headerShown: true,
+            title: 'Rating'
+          }}
+        />
       </Stack>
     </PaperProvider>
   )

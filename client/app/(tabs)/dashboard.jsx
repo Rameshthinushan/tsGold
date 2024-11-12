@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Dimensions  } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView, Pressable, Dimensions  } from "react-native";
 import {
   LineChart,
   BarChart,
@@ -51,6 +51,9 @@ export default function Dashboard() {
 }
 
 const CardSection = () => {
+  const rating = () => {
+    router.push('../components/rate');
+  }
   return (
     <View>
       <View 
@@ -97,10 +100,11 @@ const CardSection = () => {
         </View>
       </View>
       <View style={styles.cardRow}>
-        <View style={{
-          ...styles.card,
-          ...styles.goldRateCard
-        }}>
+
+        <Pressable 
+          style={[styles.card,styles.goldRateCard]}
+          onPress={rating}
+        >
           <View 
             style={{
               ...styles.cardIcon,
@@ -114,7 +118,8 @@ const CardSection = () => {
           </View>
           <Text style={styles.cartTitle}>Today Gold Rate</Text>
           <Text style={styles.cartSubTitle}>213,000</Text>
-        </View>
+        </Pressable>
+        
         <View style={{
           ...styles.card,
           ...styles.silverRateCard
@@ -193,12 +198,30 @@ const SectionChartSales = () => {
   }
 
   return (
-    <View style={{marginVertical: 20}}>
+    <View style={{
+      marginVertical: 20,
+      backgroundColor: 'white',
+      padding: 10,
+      flex: 1,
+      alignItems: 'center',
+      borderRadius: 18
+    }}>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+        <Text style={{width: '10%'}}>
+          <Icon name="information-outline" size={25}></Icon>
+        </Text>
+        <Text style={{width: '82%', fontSize: 15, fontWeight: '700'}}>Last 6 Month Sales Detailes</Text>
+        {/* <Text style={{width: '10%'}}> */}
+        <Pressable>
+          <Icon name="arrow-right" size={20}></Icon>
+        </Pressable>
+          
+        {/* </Text> */}
+      </View>
       
-      <Text style={{fontWeight: 700, fontSize: 12, color: 'grey', marginBottom: 8, textAlign: 'right', marginEnd: 10}}>Last 6 Month Sales</Text>
       <LineChart
         data={data}
-        width={screenWidth-39}
+        width={screenWidth-70}
         height={220}
         yAxisLabel="$"
         yAxisSuffix="k "
@@ -206,7 +229,7 @@ const SectionChartSales = () => {
         chartConfig={chartConfig}
         bezier
         style={{
-          //marginVertical: 20,
+          marginVertical: 15,
           borderRadius: 16, 
           // marginBottom: 100
         }}

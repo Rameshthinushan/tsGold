@@ -11,8 +11,22 @@ export default function Purchase() {
         edges={['top']}
       >
         <ScrollView>
+          <View style={{flexDirection: 'row'}}>
+            <TouchableOpacity style={{width: '50%', backgroundColor: '#a020f0', paddingVertical: 15}}>
+              <Text style={{textAlign: 'center', color: 'white'}}>Purchase</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{
+              width: '50%', 
+              backgroundColor: '#a020f0', 
+              paddingVertical: 15,
+              borderBottomColor: '#091057',
+              borderBottomWidth: 4
+            }}>
+              <Text style={{textAlign: 'center', color: 'white'}}>Order</Text>
+            </TouchableOpacity>
+          </View>
           <View style={{ padding: 10 }}>
-
+            
             <View 
               style={{ 
                 flex: 2, 
