@@ -64,7 +64,11 @@ export default function Stock() {
                   style={styles.productImage}
                 />
                 <View style={styles.cardContent}>
-                  <Text style={styles.productTitle}>{category.categoryName}</Text>
+                  <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <Icon name="circle" color={'green'} style={{marginEnd: 10}}></Icon>
+                    <Text style={styles.productTitle}>{category.categoryName}</Text>
+                    
+                  </View>
                   <Pressable>
                     <Icon name="arrow-right" size={20}></Icon>
                   </Pressable>
@@ -78,6 +82,7 @@ export default function Stock() {
         <TouchableOpacity style={styles.floatingButton}>
           <Icon name="plus" size={24} color="white" />
         </TouchableOpacity>
+
       </SafeAreaView>
     </SafeAreaProvider>
   );

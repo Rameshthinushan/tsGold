@@ -1,24 +1,10 @@
-// import { StyleSheet, Text, View } from 'react-native'
-// import React from 'react'
-
-// export default function Orders() {
-//   return (
-//     <View>
-//       <Text>orders</Text>
-//     </View>
-//   )
-// }
-
-// const styles = StyleSheet.create({})
-
-
-
 import { StyleSheet, Text, View, ScrollView, Image, TextInput, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function Orders() {
+  const [tabs, setTabs] = useState(false)
   return (
     <SafeAreaProvider>
       <SafeAreaView 
@@ -26,32 +12,80 @@ export default function Orders() {
         edges={['top']}
       >
         <ScrollView>
-          <View style={{ padding: 10 }}>
 
-            <View 
-              style={{ 
-                flex: 2, 
-                flexDirection: 'row', 
-                marginBottom: 20
-              }}
+          <View style={{flexDirection: 'row'}}>
+            <TouchableOpacity 
+              style={[styles.tabs, (tabs)? styles.nonActiveBorder : styles.activeBorder ]}
+              onPress={() => setTabs(false)}
             >
-              <View style={styles.searchContainer}>
-                <Icon name="magnify" size={20} color="grey" style={styles.searchIcon} />
-                <TextInput
-                  style={styles.input}
-                  placeholder="Customer Search"
-                  placeholderTextColor="grey"
-                />
-              </View>
-               <TouchableOpacity style={styles.floatingButton}>
-                <Text style={styles.floatingButtonText}>Bills</Text>
-              </TouchableOpacity>
-            </View>
-
+              <Text style={{textAlign: 'center', color: 'white'}}>Purchase</Text>
+            </TouchableOpacity>
+            <TouchableOpacity 
+              style={[styles.tabs, (tabs)? styles.activeBorder : styles.nonActiveBorder ]}
+              onPress={() => setTabs(true)}
+            >
+              <Text style={{textAlign: 'center', color: 'white'}}>Order</Text>
+            </TouchableOpacity>
           </View>
+          {
+            (tabs)? <Order/> : <Purchase/>
+          }
+          
         </ScrollView>
       </SafeAreaView>
     </SafeAreaProvider>
+  )
+}
+
+const Purchase = () => {
+  return (
+    <View style={{ padding: 10 }}>
+      <View 
+        style={{ 
+          flex: 2, 
+          flexDirection: 'row', 
+          marginBottom: 20
+        }}
+      >
+        <View style={styles.searchContainer}>
+          <Icon name="magnify" size={20} color="grey" style={styles.searchIcon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Customer Search"
+            placeholderTextColor="grey"
+          />
+        </View>
+          <TouchableOpacity style={styles.floatingButton}>
+          <Text style={styles.floatingButtonText}>Bills</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  )
+}
+
+const Order = () => {
+  return (
+    <View style={{ padding: 10 }}>
+      <View 
+        style={{ 
+          flex: 2, 
+          flexDirection: 'row', 
+          marginBottom: 20
+        }}
+      >
+        <View style={styles.searchContainer}>
+          <Icon name="magnify" size={20} color="grey" style={styles.searchIcon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Customer Search"
+            placeholderTextColor="grey"
+          />
+        </View>
+          <TouchableOpacity style={styles.floatingButton}>
+          <Text style={styles.floatingButtonText}>Bills</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   )
 }
 
@@ -59,6 +93,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f8f8f8',
+  },
+  tabs: {
+    width: '50%', 
+    backgroundColor: '#a020f0', 
+    paddingVertical: 15,
+  },
+  activeBorder: {
+    borderBottomColor: '#091057',
+    borderBottomWidth: 4
+  },
+  nonActiveBorder: {
+    borderBottomWidth: 4,
+    borderBottomColor: '#a020f0'
   },
   productImage: {
     height: 50,
@@ -74,7 +121,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#f0f1f3',
+    backgroundColor: '#e2e3e5',
     borderRadius: 8,
     paddingHorizontal: 10,
     paddingVertical: 5,
@@ -93,7 +140,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 2,
     fontSize: 16,
-    color: '#000',
+    color: '#000'
   },
   floatingButton: {
     // position: 'absolute',

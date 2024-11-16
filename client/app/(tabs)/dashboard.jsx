@@ -32,9 +32,8 @@ export default function Dashboard() {
             size={21}
           />
           <Icon 
-            name="cog" 
+            name="power-standby" 
             size={21}
-            onPress={() => (router.push('components/settings'))}
           />
         </View>
       </Appbar.Header>
@@ -251,7 +250,7 @@ const SectionChartGold = () => {
         Math.random() * 100,
         Math.random() * 100,
         Math.random() * 100
-      ]}
+      ]},
     ]
   }
 
@@ -273,12 +272,31 @@ const SectionChartGold = () => {
   }
 
   return (
-    <View style={{marginBottom: 200}}>
+    <View style={{
+      marginVertical: 8,
+      backgroundColor: 'white',
+      padding: 10,
+      flex: 1,
+      alignItems: 'center',
+      borderRadius: 18,
+      marginBottom: 100
+    }}>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+        <Text style={{width: '10%'}}>
+          <Icon name="information-outline" size={25}></Icon>
+        </Text>
+        <Text style={{width: '82%', fontSize: 15, fontWeight: '700'}}>Last 7 Days Gold Rating</Text>
+        {/* <Text style={{width: '10%'}}> */}
+        <Pressable>
+          <Icon name="arrow-right" size={20}></Icon>
+        </Pressable>
+          
+        {/* </Text> */}
+      </View>
       
-      <Text style={{fontWeight: 700, fontSize: 12, color: 'grey', marginBottom: 8, textAlign: 'right', marginEnd: 10}}>Last 7 Days Gold Rating</Text>
       <LineChart
         data={data}
-        width={screenWidth-39}
+        width={screenWidth-70}
         height={220}
         yAxisLabel="$"
         yAxisSuffix="k "
@@ -286,7 +304,7 @@ const SectionChartGold = () => {
         chartConfig={chartConfig}
         bezier
         style={{
-          //marginVertical: 20,
+          marginVertical: 15,
           borderRadius: 16, 
           // marginBottom: 100
         }}
